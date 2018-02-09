@@ -2,6 +2,7 @@ const tarotQuiz = {};
 
 tarotQuiz.quiz = {
   currentQuestion: 0,
+  score: 0,
   questions: [
     {
       text: "Which card is most often associated with a profound new start?",
@@ -67,6 +68,12 @@ tarotQuiz.quiz = {
         "The Wheel of Fortune"
       ],
       correct: 1
+    },
+    {
+      text:
+        "Which tarot card is often associated with a feeling of being trapped?",
+      options: ["The Chariot", "The Tower", "Temperance", "The Devil"],
+      correct: 3
     }
   ]
 };
@@ -78,19 +85,21 @@ tarotQuiz.newQuestion = function() {
     //if the number is less than 10 
     //Select a random question from a pool of 30 available questions
     //remove the selected question from the pool of available questions
-    randomQuestion = tarotQuiz.quiz.questions[Math.floor(Math.random() * tarotQuiz.quiz.questions.length)];
-    displayedText = randomQuestion.text;
-    answerOptions = randomQuestion.options;
-    questionIndex = tarotQuiz.quiz.questions.indexOf(randomQuestion);
-    askedQuestion = tarotQuiz.quiz.questions.splice(questionIndex, 1);
-    currentQuestionNumber = tarotQuiz.quiz.currentQuestion + 1;
-    if (tarotQuiz.quiz.currentQuestion < 10) {
+    const randomNumber = Math.floor(Math.random() * tarotQuiz.quiz.questions.length)
+    const randomQuestion = tarotQuiz.quiz.questions[randomNumber];
+    tarotQuiz.quiz.currentAnswer = randomQuestion;
+    const displayedText = randomQuestion.text;
+    const answerOptions = randomQuestion.options;
+    const questionIndex = tarotQuiz.quiz.questions.indexOf(randomQuestion);
+    const askedQuestion = tarotQuiz.quiz.questions.splice(questionIndex, 1);
+    const currentQuestionNumber = tarotQuiz.quiz.currentQuestion + 1;
       //calculate and display the current question number
       $(".question-number").text("Question #" + currentQuestionNumber);
       //insert question text into question-text element to be displayed
       $(".question-text").text(displayedText);
       console.log(displayedText);
       //iterate through the array of answer options and add each option as an li to the ul
+      $(".remaining-questions").append("<p>" + (11 - currentQuestionNumber) + " question(s) remaining." + "</p>");
       $(".options").html("");
       for (let i = 0; i < answerOptions.length; i = i + 1) {
         $(".options").append('<li id="' + i + '">' + answerOptions[i] + "</li>");
@@ -98,39 +107,63 @@ tarotQuiz.newQuestion = function() {
       }
       //if the number is 10
       //display results page
-    } else {
-      console.log("Da jam done son!!");
-    }
 };
 
 
     //User click the 'next' button
     //Display question to user
     $(".next-question").click(function(event) {
-      if (tarotQuiz.quiz.currentQuestion != 10) {
+      if (tarotQuiz.quiz.currentQuestion + 1 !== 10) {
         console.log("clicked next Button");
         tarotQuiz.quiz.currentQuestion = tarotQuiz.quiz.currentQuestion + 1;
         console.log(tarotQuiz.quiz.currentQuestion);
         $(".next-question").addClass("hidden");
+        $(".feedback").html('');
+        $(".remaining-questions").html("");
         tarotQuiz.newQuestion();
       } 
+      else {
+        console.log("Da jam done son!!");
+        $(".question-view").addClass("hidden");
+        $(".quiz-end-page").removeClass("hidden");
+        if (tarotQuiz.quiz.score < 5) {
+                 $(".score-display").text("Nice try, this result simply means you're at the beginning of your journey...kinda like The Fool" + "You scored " + tarotQuiz.quiz.score + " out of " + 10);
+        } else if (tarotQuiz.quiz.score >= 5 && tarotQuiz.quiz.score < 8) {
+                  $(".score-display").text("You haven't mastered the deck as yet, but you're definitely starting to come into your own with your practice. " + "You scored " + tarotQuiz.quiz.score + " out of " + 10);
+        } else if (tarotQuiz.quiz.score >= 8) {
+                $(".score-display").text("Wow, you're a true Star!" + "You scored " + tarotQuiz.quiz.score + " out of " + 10);
+              }
+      }
+    });
       
-    });    
-
     
     $(".options").on('click','li',function() {
         console.log('linked clicked')
         let guess = $(this).attr('id');
         $(this).addClass("selected");
         $(".next-question").removeClass("hidden");
-        tarotQuiz.checkAnswer();
+        tarotQuiz.checkAnswer(guess);
+    });
+
+    $(".restart").click(function(event) {
+      tarotQuiz.quiz.current = 0;
+      tarotQuiz.quiz.score = 0;
+      $(".quiz-end-page").addClass("hide");
+      $(".score").addClass("hide");
+      $(".feedback").html("");
+      $(".remaining-questions").html("");
+      $(".quiz-start-page").show();
     });
 
     tarotQuiz.checkAnswer = function(guess) {
-	if (guess == tarotQuiz.quiz.questions[tarotQuiz.quiz.currentQuestion].correct) {
+      const currentAnswer = tarotQuiz.quiz.randomQuestion;
+	if (guess == tarotQuiz.quiz.currentAnswer.correct) {
     console.log("correct!");
+    $(".feedback").append(`<p>You got it right!</p>`); 
+    tarotQuiz.quiz.score++;
   } else {
     console.log("try again");
+    $(".feedback").append(`<p>Sorry, that's incorrect.</p>`);
   }
 }
 

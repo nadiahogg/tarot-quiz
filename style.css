@@ -22,14 +22,14 @@ h1 {
 
 
 /* QUIZ START PAGE*/
-.quiz-start-page {
+.quiz-start-page, .quiz-end-page {
     width: 60%;
     margin: 0 auto;
     padding: 20px;
 }
  
 
-.start {
+.start, .restart {
     height: 50px;
     width: 200px;
     margin: 15px auto;
