@@ -285,6 +285,7 @@ tarotQuiz.newQuestion = function() {
               }
       }
     $(".options").addClass("active");  
+    $(".card-image").removeAttr("src");
     });
       
     
@@ -316,7 +317,9 @@ tarotQuiz.newQuestion = function() {
 
     $(".options").on("mouseleave", "li", function() {
       console.log("left area")
+      if ($(".options").hasClass("active")) {
       $(".card-image").removeAttr("src");
+      }
     });
 
     $(".restart").click(function(event) {
@@ -342,9 +345,15 @@ tarotQuiz.newQuestion = function() {
   } else {
     console.log("try again");
     $(".feedback").append(`<p>Sorry, that's incorrect.</p>`);
-    $("#" + tarotQuiz.quiz.currentAnswer.correct).addClass("correct-answer");
+   
   }
- 
+  $("#" + tarotQuiz.quiz.currentAnswer.correct).addClass("correct-answer");
+  
+  for (let i = 0; i < tarotQuiz.cards.length; i = i + 1) {
+    if ($(".correct-answer")[0].innerText == tarotQuiz.cards[i].cardName) {
+      $(".card-image").attr("src", "./assets/" + tarotQuiz.cards[i].fileName + ".jpg");
+  }
+}
 };
 
 // tarotQuiz.showImage = function(correctCard) {

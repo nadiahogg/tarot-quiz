@@ -76,8 +76,9 @@ h1 {
 }
 
 .selected {
-    background:rgba(247, 191, 61, .5);
+    background:rgb(252, 233, 186);
 }
 .correct-answer {
     background:rgba(247, 191, 61);
+    color: white;
 }
