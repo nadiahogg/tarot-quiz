@@ -20,19 +20,29 @@
     <!-- END QUIZ START PAGE -->
 
     <!-- QUESTION VIEW -->
-    <section class="question-view hidden">
-        <section class="remaining-questions"></section>
-        <section class="questions">
-            <div class="displayed-question">
-                <p class="question-number"></p>
-                <h1 class="question-text"></h1>
-                <ul class="options"></ul>
-                <button type="submit" class="next-question hidden">NEXT</button>
+    <section class="question-view hide">
+       
+            <section class="remaining-questions"></section>
+            <section class="questions">
+                <div class="displayed-question">
+                    <p class="question-number"></p>
+                    <h1 class="question-text"></h1>
+                    <ul class="options active"></ul>
+
+                    <section class="score">
+                        <section class="feedback"></section>
+                    </section>
+                    <button type="submit" class="next-question hidden">NEXT</button>    
+                </div>
+            </section>
+       
+       
+            <div>
+                <img class="card-image" alt="">
             </div>
-        </section>
-        <section class="score">
-            <section class="feedback"></section>
-        </section>
+       
+
+        
     </section>
     <!-- END QUESTION VIEW -->
 
