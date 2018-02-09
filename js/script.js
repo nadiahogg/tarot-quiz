@@ -337,7 +337,7 @@ tarotQuiz.newQuestion = function() {
       let optionName = (this.innerText);
       for (let i = 0; i < tarotQuiz.cards.length; i = i + 1) {
         if (optionName == tarotQuiz.cards[i].cardName){
-          $(".card-image").attr("src", "./assets/" + tarotQuiz.cards[i].fileName + ".jpg");
+          $(".card-image").attr("src", "./images/" + tarotQuiz.cards[i].fileName + ".jpg");
         }
       }
     }
@@ -389,7 +389,7 @@ tarotQuiz.newQuestion = function() {
   
   for (let i = 0; i < tarotQuiz.cards.length; i = i + 1) {
     if ($(".correct-answer")[0].innerText == tarotQuiz.cards[i].cardName) {
-      $(".card-image").attr("src", "./assets/" + tarotQuiz.cards[i].fileName + ".jpg");
+      $(".card-image").attr("src", "./images/" + tarotQuiz.cards[i].fileName + ".jpg");
   }
 }
 };
