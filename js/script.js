@@ -142,35 +142,43 @@ tarotQuiz.quiz = {
 tarotQuiz.cards = [
   {
     cardName: "The Fool",
-    fileName: "00_fool"
+    fileName: "00_fool",
+    meaning: "<p>The Fool is numbered 0, the number of unlimited potential, and does not actually have a specific place in the sequence of the Tarot cards. The Fool can come either at the beginning of the Major Arcana or at the end. The Major Arcana is often considered as the Fool’s journey through life and as such, he is ever present and therefore needs no number.</p><p>The Fool is shown at the beginning of his journey with unlimited potential. The sun rising up behind him represents the beginning of his journey. He is facing north-west, the direction of the unknown. He is looking upwards, toward the sky, or Spirit. He is about to step off a cliff into the material world but is he prepared? He has all the tools and resources he needs in the bag on his staff but he has not opened the bag yet. The white rose in his left hand represents purity and innocence. He has a guardian in the little white dog who will protect him throughout his journey but who will also push him to learn the lessons the Fool came here to learn. The mountains behind the Fool represent the realms of Spirit that he has just left and will spend his life trying to regain.</p>"
   },
   {
     cardName: "The Magician",
-    fileName: "01_magician"
+    fileName: "01_magician",
+    meaning: "<p>The Magician is associated with the planet, Mercury and carries with it skill, logic, and intellect. The number of the Magician is one, the number of beginnings. The Magician is the bridge between the world of the spirit and the world of humanity. His right hand holds a staff raised toward the sky and his left hand points to the earth. He takes the power of the Universe and channels it through his own body and directs it to the physical plane. Above the Magician’s head is the symbol of eternity and around his waist is a snake biting its own tail, another symbol of eternity. His magical table holds all four suits of the Tarot, each of which represents one of the four primordial elements of the alchemists – earth, air, fire and water. These symbolise the appropriate use of mind, heart, body and soul in the process of manifestation. The Magician’s robe is white, symbolising the purity and innocence found in the Fool but his cloak is red, representing worldly experience and knowledge. In the bed of flowers at his feet this duality is repeated in the mix of pure white lilies and thorny red roses.</p>"
   },
   {
     cardName: "The High Priestess",
-    fileName: "02_highpriestess"
+    fileName: "02_highpriestess",
+    meaning: "<p>The High Priestess is also known as Persephone, Isis, the Corn Maiden and Artemis. She sits at the gate before the great Mystery, as indicated by the Tree of Life in the background. She sits between the darkness and the light, represented by the pillars of Solomon’s temple, which suggests it is she who is the mediator of the passage into the depth of reality. The tapestry hung between the pillars keeps the casual onlookers out and allows only those initiated to enter. The pomegranates on the tapestry are sacred to Persephone. They are a symbol of duty (because Persephone ate a pomegranate seed in the underworld which forced her to return every year). The blue robe the Priestess is wearing is a symbol of knowledge. She is wearing the crown of Isis symbolising the Triple Goddess. The solar cross on her breast is a symbol of balance between male and female.</p><p>In her lap, she holds the half-revealed and half-concealed Torah, representative of the exoteric and the esoteric teachings and higher knowledge. The moon under her left foot shows her dominion over pure intuition. The palm indicates fertility of the mind and the cube on which she sits is the earth. The planet associated with the High Priestess is the Moon.</p>"
   },
   {
     cardName: "The Empress",
-    fileName: "03_empress"
+    fileName: "03_empress",
+    meaning: "<p>The Empress is the archetypal Earth Mother, the Anima, the Feminine Principle, Demeter, Freyja and the Goddess of Fertility. Ruled by Venus, the planet of love, creativity, fertility, art, harmony, luxury, beauty and grace.</p><p>The main feature of this card is the Empress herself, a full-figured woman with blond hair and a peaceful and calm aura about her. On her head she wears a crown of stars, showing her connection with the mystical realm of angels and fairies. She is dressed in a patterned robe of pomegranates, symbolic of fertility and is seated upon a luxurious array of cushions and flowing red velvet with the symbol of Venus emblazoned upon it.</p><p>The Empress is surrounded by a beautiful, lush forest with a stream running through it, demonstrating the Empress’s deep emotional connection with Mother Earth and life. She draws her sense of peace from the trees and the water and is rejuvenated by the energy of nature. In the foreground, golden wheat springs from the ground, reflecting abundance from a recent harvest.</p>"
   },
   {
     cardName: "The Emperor",
-    fileName: "04_emperor"
+    fileName: "04_emperor",
+    meaning: "<p>The Emperor is the complement to the Empress. He is the Masculine Principle, the Animus and the Patriarch. He represents power and authority, and his stern attitude is quite a departure from the sensual beauty of the Empress. The Emperor has a long, white beard, a symbol of his experience. As an archetype, it is common to see masculine figures of authority or father figures with long white beards. It suggests that this man has acquired years of wisdom and experience and he is worthy of listening to because he has seen first-hand the consequences of his actions.</p><p>Behind his throne are barren mountains and the throne itself is decorated with four rams’ heads, representing intellectual heights, determination, action, initiative and leadership. The ram is also a symbol of Aries, the astral ruler of the Emperor. In his right hand, the Emperor holds an Ankh, the Egyptian symbol of Life, and in his left is an orb representing the world over which he rules. The orange background and the Emperor’s red clothing symbolise his passion and energy for life and the challenges it offers.</p>"
   },
   {
     cardName: "The Hierophant",
-    fileName: "05_hierophant"
+    fileName: "05_hierophant",
+    meaning: "<p>The Hierophant is known as the High Priest in some decks. He is the masculine counterpart to the High Priestess. He is also known as Chiron, the Pope and the Shaman. The Hierophant is ruled by Taurus.</p><p>The Hierophant is represented by a religious figure, sitting within a formal church environment. He is wearing three elaborate vestments of his office that represent the three worlds. The crown he is wearing has three tiers to. His right hand is raised in benediction, the same hand the Magician has raised. While the Magician was taking raw power from the Universe and manifesting it on the material plane, the Hierophant channels that power through society (as in the religions of the world). The triple sceptre is another symbol of his dominion over the three worlds. The crossed keys represent a balance between the conscious and subconscious minds and unlock the mysteries. Before him kneel two initiates. The Hierophant’s task is to bring the two initiates into the church so that they can take up their appointed roles. This symbolises entry into all types of institutions where there is a shared group identity. These could include schools, clubs, teams, companies and societies.</p>"
   },
   {
     cardName: "The Lovers",
-    fileName: "06_lovers"
+    fileName: "06_lovers",
+    meaning: "<p>The sign associated with the Lovers is Gemini. The two figures in the Lovers card are blessed and protected by the angel in the clouds above them. Angels, in general, represent the refinement of earthly desires. This angel, in particular, is Raphael, the angel of Air. One of the associations of Air is communication, necessary for a healthy relationship. The purple cloak on the angel represents royalty, a symbol of how important communication is. The sun shines brightly over the couple, bringing warmth and security. The earth at their feet is green and fertile and suggests life and happiness. The snake in the fruit-laden tree behind the woman suggests the story of Adam and Eve, the fall of humanity from grace, and the temptations of the world. The snake is also a symbol of the senses. The flames behind the man represent the flames of passion, indicating the primary concern of the man. There are twelve flames, representing the twelve zodiac signs, the symbol of time and eternity. The man looks to the woman, who looks to the angel, indicating the path of the conscious to the subconscious to the super-conscious, or from physical desire to emotional needs to spiritual concerns. The mountain is a phallic symbol, while the water is a feminine symbol, indicating balance between the two.</p>"
   },
   {
     cardName: "The Chariot",
-    fileName: "07_chariot"
+    fileName: "07_chariot",
+    meaning: "<p>The Chariot is associated with the astrological sign of Cancer. He sits within a canopy of six-pointed stars, representing the celestial influences at work in this Tarot card. The crescent moons on the man’s shoulders are outward facing to refer to the formative world. The symbols on his tunic are alchemical symbols, representing the spiritual transformation of man. The square signifies earth, a sign of strength of will. The laurel and star crown indicate the highest attainment of man in spiritual evolution.</p><p>The wings on the Chariot represent inspiration and the Hindu sign of the union of positive and negative. The black and white sphinxes have the same meaning. The Charioteer holds no reins, just the wand from the Magician card. He controls through strength of will in the same way the Magician does. The city is behind him, indicating he has turned his back on civilisation and materialism in order to seek spiritual matters.</p>"
   },
   {
     cardName: "Strength",
@@ -267,8 +275,10 @@ tarotQuiz.newQuestion = function() {
         console.log("clicked next Button");
         tarotQuiz.quiz.currentQuestion = tarotQuiz.quiz.currentQuestion + 1;
         console.log(tarotQuiz.quiz.currentQuestion);
+        $(".show-meaning").addClass("hidden");
         $(".next-question").addClass("hidden");
         $(".feedback").html('');
+        $(".card-meaning").html("");
         $(".remaining-questions").html("");
         tarotQuiz.newQuestion();
       } 
@@ -289,12 +299,17 @@ tarotQuiz.newQuestion = function() {
     });
       
     
+    //show card meaning when user clicks show meaning button
+    
+
+
     $(".options").on('click','li',function() {
       if ($(".options").hasClass("active")) {
         console.log('linked clicked')
         let guess = $(this).attr('id');
         $(".options").removeClass("active");
         $(this).addClass("selected");
+        $(".show-meaning").removeClass("hidden");
         $(".next-question").removeClass("hidden");
         tarotQuiz.checkAnswer(guess);
       }
@@ -330,6 +345,15 @@ tarotQuiz.newQuestion = function() {
       $(".feedback").html("");
       $(".remaining-questions").html("");
       $(".quiz-start-page").show();
+    });
+
+    $(".show-meaning").click(function(event) {
+      for (let i = 0; i < tarotQuiz.cards.length; i = i + 1) {
+    if ($(".correct-answer")[0].innerText == tarotQuiz.cards[i].cardName) {
+      console.log("HELLL YAS");
+      $('.card-meaning').html(`<p> ${tarotQuiz.cards[i].meaning} </p>`);
+  }
+}
     });
 
 
