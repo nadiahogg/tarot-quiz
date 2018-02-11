@@ -6,52 +6,78 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
     <title>Tarot Quiz</title>
     <link rel="stylesheet" type="text/css" href="./styles/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato|Macondo+Swash+Caps" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Josefin+Sans:300,400" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
 </head>
 <body>
     
     <!-- QUIZ START PAGE -->
-    <section class="quiz-start-page">
-        <h1>Test Your Tarot Knowledge</h1>
-        <p>Tarot is a centuries-old practice that combines art with psychology. How much do you know about these richly-illustrated
-        and complex cards? </p>
-        <button type="submit" class="start">START</button>
-    </section>
+        <section class="quiz-start-page">
+            <img class="logo" src="./images/noun_516776_cc.png" alt="">
+            <h1>Tarot Practice</h1>
+            <p class="intro">Tarot is a centuries-old practice that combines art with psychology. How much do you know about these richly-illustrated
+            and complex cards? </p>
+            <button type="submit" class="start">START</button>
+        </section>
     <!-- END QUIZ START PAGE -->
 
     <!-- QUESTION VIEW -->
-    <section class="question-view hide">
-            <div class="card-meaning">
 
-            </div>
-            <section class="remaining-questions"></section>
-            <section class="questions">
-                <div class="displayed-question">
-                    <p class="question-number"></p>
-                    <h1 class="question-text"></h1>
-                    <ul class="options active"></ul>
 
-                    <section class="score">
-                        <section class="feedback"></section>
-                    </section>
-                    <button type="submit" class="show-meaning hidden">MEANING</button>   
-                    <button type="submit" class="next-question hidden">NEXT</button>
-                </div>
-            </section>
-       
-       
-            <div>
-                <img class="card-image" alt="">
-            </div>
+    <section class="question-view hide clearfix">
+        <div class="header-bar clearfix">
+            <div class="feedback"></div>
+            <div class="remaining-questions "></div>
+        </div>
     
        
+    
+        <div class="image">
+            <div class="card-container">
+                <img class="card-image" alt="">
+                <p class="show-meaning hide">Show Card Meaning</p>
+            </div>
+        </div>
+        
+        <div class="questions">
+            <div class="displayed-question">
+                <p class="question-number"></p>
+                <h2 class="question-text"></h2>
+                
+                <ul class="options active"></ul>                 
+            </div>
+        </div>
 
         
+        <section class="action-buttons clearfix">
+        
+            <button type="submit" class="next-question hide">NEXT </button>
+            
+        
+        </section>
+        
+           
     </section>
+                <!-- <div class="results">
+                
+                        <section class="feedback"></section> -->
+       
+
+        <section class="overlay hide">
+            <button type="submit" class="close-meaning ">
+                <i class="far fa-times-circle"></i>
+            </button>
+            <div class="card-meaning">
+        </section>
+
+    
+            
+
     <!-- END QUESTION VIEW -->
 
     <!-- QUIZ END PAGE -->
-    <section class="quiz-end-page hidden">
+    <section class="quiz-end-page hide">
         <h1 class="score-display"></h1>
         <button type="submit" class="restart">TRY AGAIN</button>
     
