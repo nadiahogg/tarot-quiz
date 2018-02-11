@@ -53,9 +53,48 @@ h3 {
     font-size: 1.5rem;
 }
 
-.quiz-end-page h1 {
-    font-size: 5rem;
+h4 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: .7rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    }
+
+a {
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+}    
+
+.social {
+  margin-top: 70px; }
+
+
+.quiz-start-page h1 {
+    font-size: 8rem;
+
 }
+
+.score-display {
+    font-family: 'Josefin Sans', sans-serif;
+    border: 1px solid white;
+    padding: 20px;
+    font-size: 1.8rem;
+    color: white;
+}
+.author {
+    color: white;
+}
+
+span {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+
+}
+
 
 .logo {
     width: 200px;
@@ -65,10 +104,13 @@ h3 {
     display: none; 
 }
 
+i {
+    color: white;
+}
 
 /* QUIZ START PAGE*/
 .quiz-start-page, .quiz-end-page {
-    width: 60%;
+    width: 70%;
     margin: 0 auto;
     padding: 100px;
     
@@ -222,7 +264,7 @@ background-color: #7C4F87;
 
 .overlay {
     width: 600px;
-    height: 500px;
+    height: 550px;
     background-color: #597D8D;
     border: 20px solid  #597D8D;
     padding: 30px;
