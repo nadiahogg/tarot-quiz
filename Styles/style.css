@@ -239,10 +239,10 @@ background-color: #7C4F87;
 }
 
 .show-meaning {
-    font-size: .8rem;
-    font-weight: 400;
+    font-size: .9rem;
+    font-weight: 300;
     cursor: pointer;
-    color: rgb(69, 98, 110)
+    color: White
 }
 
 .show-meaning:hover {
@@ -294,9 +294,10 @@ background-color: #7C4F87;
     
 }
 .card-image {
+    border-radius: 10px;
      top: 70%;
     left: 50%;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.40), 0 15px 12px rgba(0,0,0,0.32);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 
 }
@@ -377,6 +378,5 @@ background-color: #7C4F87;
 }
     
     /* Playing Cards by Nikita Kozin from the Noun Project */
-    /* Card meaning from Tarot Biddy */
-    /* www.trustedtarot.com */
+    /* Card meaning from www.trustedtarot.com */
     /* Card images from US Games */
