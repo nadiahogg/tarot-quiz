@@ -28,7 +28,8 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 1.3rem;
-    color:#597D8D;
+    /* color:#597D8D; */
+    color: #fff;
    
 }
 
@@ -46,7 +47,7 @@ h1 {
 h2 {
     font-family: 'Josefin Sans', sans-serif;
     display: inline;
-    color: #597D8D;
+    color: #fff;
 }
 
 h3 {
@@ -99,6 +100,7 @@ span {
 
 .logo {
     width: 200px;
+
 }
 
 .hide {
@@ -113,7 +115,7 @@ i {
 .quiz-start-page, .quiz-end-page {
     max-width: 70%;
     margin: 0 auto;
-    padding: 100px;
+    padding: 5%;
     border: 1px solid white;
     background: rgba(49, 35, 53, 0.5);
     
@@ -138,11 +140,18 @@ i {
 
 /* QUESTIONS */
 
+
+.bar-logo {
+    max-width: 75px;
+    float: left;
+    margin: 5px 15px;
+}
 .question-view {
     max-width: 70%;
     margin: 0 auto;
     min-height: 525px;
-    background-color: rgba(255, 255, 255, 1);
+    background: rgba(49, 35, 53, 0.3);
+    /* background-color: rgba(255, 255, 255, 1); */
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }   
 
@@ -154,12 +163,12 @@ background-color: #7C4F87;
 
 
 
-.feedback {
+/* .feedback {
     float: left;
     padding: 10px 40px;
-}
+} */
 
-.remaining-questions {
+.remaining-questions, .feedback {
     float: right;
     text-align: right;
     padding: 10px 40px;
@@ -174,7 +183,7 @@ background-color: #7C4F87;
 
 .displayed-question li {
     display: inline-block;
-    border: 3px solid #597D8D;
+    border: 3px solid white;
     width: 44%;
     margin: 10px 10px;
     border-radius: 50px;
@@ -184,6 +193,7 @@ background-color: #7C4F87;
 }
 
 .active li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -219,7 +229,7 @@ background-color: #7C4F87;
     font-size: 20px;
     border: none;
     background: #FF506D; 
-    border-radius: 5px;
+    border-radius: 50px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -255,12 +265,13 @@ background-color: #7C4F87;
 }
 
 .selected {
-    box-shadow: inset 0 5px 5px rgba(0,0,0,0.25), inset 0 5px 5px rgba(0,0,0,0.22);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 5px 5px rgba(0,0,0,0.50), inset 0 5px 5px rgba(0,0,0,0.22);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 .correct-answer {
-    background: #597D8D;
-    color: white;
+    background: white;
+    color: #2D1754;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
@@ -292,8 +303,60 @@ background-color: #7C4F87;
 
 
         
-@media only screen and (max-width: 748px) {
-  .quiz-start-page, .remaining-questions, .questions, .score {
+@media only screen and (max-width: 980px) {
+  
+    h1 {
+        line-height: .8rem;
+    }
+  
+    .logo {
+    width: 50%;
+    margin-bottom: 1.5rem;
+    
+}
+
+    .quiz-start-page, .remaining-questions, .questions, .score {
+    width: 80%; }
+
+  .displayed-question li {
+    width: 75%;
+    margin: 5px auto; }
+
+  .next-question {
+    width: 50%; } 
+
+    .image {
+        display: none;
+    }
+
+    .feedback {
+    float: left;
+    padding: 10px 40px;
+    width: 50%;
+    }
+
+    .remaining-questions {
+        width: 50%;
+    float: right;
+    text-align: right;
+    padding: 10px 40px;
+    /* background-color: #fff; */
+    
+    }
+
+    .question-text {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+
+    .score-display {
+        font-size: 1rem;
+    }
+}
+
+
+@media only screen and (max-width: 500px) {
+    .quiz-start-page, .remaining-questions, .questions, .score {
     width: 80%; }
 
   .displayed-question li {
@@ -303,35 +366,15 @@ background-color: #7C4F87;
   .next-question {
     width: 100%; } 
 
-    .image {
-        display: none;
+    .title {
+        font-size: .5rem;   
     }
 
-    .feedback {
-    float: left;
-    padding: 10px 40px;
-    }
-
-    .remaining-questions {
-    float: right;
-    text-align: right;
-    padding: 10px 40px;
-    /* background-color: #fff; */
-    
+    .question-text {
+        font-size: 1.5rem;
+        font-weight: 300;
     }
 }
-
-
-/* @media only screen and (max-width: 376px) {
-  .quiz-start-page, .remaining-questions, .questions, .score {
-    width: 80%; }
-
-  .displayed-question li {
-    width: 100%;
-    margin: 5px auto; }
-
-  .next-question {
-    width: 100%; } } */
     
     /* Playing Cards by Nikita Kozin from the Noun Project */
     /* Card meaning from Tarot Biddy */
