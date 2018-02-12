@@ -156,7 +156,7 @@ i {
 }   
 
 .header-bar{
-    background: rgba(99, 51, 182, .6);
+    background: rgba(99, 51, 182, .5);
 /* background-color: #7C4F87; */
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     color: #fff;
