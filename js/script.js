@@ -438,7 +438,6 @@ $(".restart").click(function(event) {
     $(".question-number").text("Question #" + currentQuestionNumber);
     //insert question text into question-text element to be displayed
     $(".question-text").text(displayedText);
-    console.log(displayedText);
     //iterate through the array of answer options and add each option as an li to the ul
     $(".remaining-questions").append(
       "<p>" + (11 - currentQuestionNumber) + " question(s) remaining" + "</p>"
@@ -446,66 +445,9 @@ $(".restart").click(function(event) {
     $(".options").html("");
     for (let i = 0; i < answerOptions.length; i = i + 1) {
       $(".options").append('<li id="' + i + '">' + answerOptions[i] + "</li>");
-      console.log(answerOptions[i]);
     }
    
   };
-
-  // //User click the 'next' button
-  // //Display question to user
-  // $(".next-question").click(function(event) {
-  //   if (tarotQuiz.quiz.currentQuestion + 1 !== 10) {
-  //     console.log("clicked next Button");
-  //     tarotQuiz.quiz.currentQuestion = tarotQuiz.quiz.currentQuestion + 1;
-  //     console.log(tarotQuiz.quiz.currentQuestion);
-  //     $(".show-meaning").addClass("hide");
-  //     $(".next-question").addClass("hide");
-  //     $(".feedback").html("");
-  //     $(".card-meaning").html("");
-  //     $(".remaining-questions").html("");
-  //     tarotQuiz.newQuestion();
-  //   } else {
-  //     console.log("Da jam done son!!");
-  //     $(".question-view").addClass("hide");
-  //     $(".quiz-end-page").removeClass("hide");
-  //     if (tarotQuiz.quiz.score < 5) {
-  //       $(".score-display").text(
-  //         "Nice try, this result simply means you're at the beginning of your journey...kinda like The Fool! " +
-  //           "You scored " +
-  //           tarotQuiz.quiz.score +
-  //           " out of " +
-  //           10
-  //       );
-  //     } else if (tarotQuiz.quiz.score >= 5 && tarotQuiz.quiz.score < 8) {
-  //       $(".score-display").text(
-  //         "You haven't mastered the deck as yet, but you're definitely starting to come into your own with your practice. " +
-  //           "You scored " +
-  //           tarotQuiz.quiz.score +
-  //           " out of " +
-  //           10
-  //       );
-  //     } else if (tarotQuiz.quiz.score >= 8) {
-  //       $(".score-display").text(
-  //         "Wow, you're a true Star! " +
-  //           "You scored " +
-  //           tarotQuiz.quiz.score +
-  //           " out of " +
-  //           10
-  //       );
-  //     }
-  //   }
-  //   $(".options").addClass("active");
-  //   $(".card-image").removeAttr("src");
-  // });
-
-  //show card meaning when user clicks show meaning button
-
-  
-
-
- 
-
-  
 
   $(".show-meaning").click(function(event) {
     $(".overlay").removeClass("hide");
@@ -520,14 +462,14 @@ $(".restart").click(function(event) {
     $(".overlay").addClass("hide");
   });
 
+  //Check if the selected answer matches the id of the correct answer
+  //Display the correct answer, image and feedback message
   tarotQuiz.checkAnswer = function(guess) {
     const currentAnswer = tarotQuiz.quiz.randomQuestion;
     if (guess == tarotQuiz.quiz.currentAnswer.correct) {
-      console.log("correct!");
       $(".feedback").append(`<p>You got it right!</p>`);
       tarotQuiz.quiz.score++;
     } else {
-      console.log("try again");
       $(".feedback").append(`<p>Sorry, that's incorrect.</p>`);
     }
     $("#" + tarotQuiz.quiz.currentAnswer.correct).addClass("correct-answer");
@@ -542,26 +484,4 @@ $(".restart").click(function(event) {
     }
   };
 
-  // tarotQuiz.showImage = function(correctCard) {
-  //   const correctCard = tarotQuiz.quiz.currentAnswer.;
-  // }
-
-  //User mouse over an answer option.
-  //display the image file for the that option
-
-  //User clicks an answer.
-  //check if the question answer matches the user's selection
-  //if answer is correct display message "You got it right!"
-  //add +1 correct answer count
-  //else display "Sorry, the correct answer is ${...}"
-  //display the image for the correct answer.
-
-  //User clicks reveal meaning.
-  //show the description of the card $('.description-box').fadeIn(2000);
-
-  //User clicks the close button on the meaning
-  // $(".description-box").fadeOut();
-
-  //User clicks 'try again' button
-  //start game again.
 });

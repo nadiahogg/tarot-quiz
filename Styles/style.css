@@ -2,15 +2,13 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-/* GENERAL */
 
+
+/* GENERAL */
 @font-face {
 font-family: "Selima";
 src: url("../styles/fonts/Selima.otf");
-
 }
-
-
 
 ul {
     margin: 20px 0 0 0;
@@ -28,9 +26,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 300;
     font-size: 1.3rem;
-    /* color:#597D8D; */
     color: #fff;
-   
 }
 
 h1 {
@@ -41,13 +37,14 @@ h1 {
     color: #fff;
     letter-spacing: 5px;
     font-weight: 400;
-    
 }
 
 h2 {
     font-family: 'Josefin Sans', sans-serif;
     display: inline;
     color: #fff;
+    font-weight: 400;
+    font-size: 2rem;
 }
 
 h3 {
@@ -68,24 +65,30 @@ a {
     padding: 5px;
 }    
 
-.social {
-  margin-top: 70px; }
+.hide {
+    display: none; 
+}
 
+i {
+    color: white;
+}
+
+
+
+/* QUIZ START PAGE*/
+.logo {
+    width: 200px;
+
+}
 
 .quiz-start-page h1 {
     font-size: 10rem;
 
 }
 
-.score-display {
-    font-family: 'Josefin Sans', sans-serif;
-    /* border: 1px solid white; */
-    padding: 20px;
-    font-size: 1.8rem;
+.intro {
     color: white;
-}
-.author {
-    color: white;
+    font-size: 1.5rem;
 }
 
 span {
@@ -96,22 +99,6 @@ span {
     text-transform: uppercase;
 
 }
-
-
-.logo {
-    width: 200px;
-
-}
-
-.hide {
-    display: none; 
-}
-
-i {
-    color: white;
-}
-
-/* QUIZ START PAGE*/
 .quiz-start-page, .quiz-end-page {
     max-width: 70%;
     margin: 0 auto;
@@ -133,47 +120,35 @@ i {
     display: block; 
 }
 
-.intro {
-    color: white;
-    font-size: 1.5rem;
-}
+
 
 /* QUESTIONS */
-
-
 .bar-logo {
     max-width: 75px;
     float: left;
     margin: 5px 15px;
 }
+
 .question-view {
     max-width: 70%;
     margin: 0 auto;
     min-height: 525px;
+    border-radius:5px;
     background: rgba(49, 35, 53, 0.3);
-    /* background-color: rgba(255, 255, 255, 1); */
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
 }   
 
 .header-bar{
-    background: rgba(99, 51, 182, .5);
-/* background-color: #7C4F87; */
+    background: rgba(4, 0, 5, 0.5);
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     color: #fff;
 }
 
 
-
-/* .feedback {
-    float: left;
-    padding: 10px 40px;
-} */
-
 .remaining-questions, .feedback {
     float: right;
     text-align: right;
     padding: 10px 40px;
-    /* background-color: #fff; */
     
 }
     
@@ -184,13 +159,11 @@ i {
 
 .displayed-question li {
     display: inline-block;
-    border: 3px solid white;
+    border: 2px solid white;
     width: 44%;
     margin: 10px 10px;
     border-radius: 50px;
     padding: 10px 0; 
-    
-    
 }
 
 .active li:hover {
@@ -240,14 +213,16 @@ i {
 }
 
 .show-meaning {
-    font-size: 1.2rem;
+    font-size: .9rem;
     font-weight: 300;
     cursor: pointer;
-color: #FEF11C;    
+    color: #FEF11C;    
+    text-transform: uppercase;
 }
 
 .show-meaning:hover {
-color: white;    
+    color: white;    
+
 }
 
 .next-question {
@@ -270,7 +245,7 @@ color: white;
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
 }
 .correct-answer {
-    background: white;
+    background: rgba(255, 255, 255, .8);
     color: #2D1754;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
     transition: all 0.3s cubic-bezier(.25,.8,.25,1);
@@ -279,8 +254,8 @@ color: white;
 .overlay {
     width: 600px;
     height: 570px;
-    background-color: rgba(89, 125, 141, .97);
-    border: 20px solid  rgba(89, 125, 141, .97);
+    background-color: rgba(89, 125, 141, 1);
+    border: 20px solid  rgba(89, 125, 141, 1);
     padding: 30px;
     line-height: 1.8rem;
     position: absolute;
@@ -302,47 +277,57 @@ color: white;
 
 }
 
+/* QUIZ END */
+.social {
+    margin-top: 70px; }
 
-        
+.score-display {
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 20px;
+    font-size: 1.8rem;
+    color: white;
+}
+.author {
+    color: white;
+}
+       
+
+
 @media only screen and (max-width: 980px) {
-  
     h1 {
         line-height: .8rem;
     }
   
     .logo {
-    width: 50%;
-    margin-bottom: 1.5rem;
-    
-}
+        width: 50%;
+        margin-bottom: 1.5rem;
+    }
 
     .quiz-start-page, .remaining-questions, .questions, .score {
-    width: 80%; }
+        width: 80%; }
 
-  .displayed-question li {
-    width: 75%;
-    margin: 5px auto; }
+    .displayed-question li {
+        width: 75%;
+        margin: 5px auto; }
 
-  .next-question {
-    width: 50%; } 
+    .next-question {
+        width: 50%; } 
 
     .image {
         display: none;
     }
 
     .feedback {
-    float: left;
-    padding: 10px 40px;
-    width: 50%;
+        float: left;
+        padding: 10px 40px;
+        width: 50%;
     }
 
     .remaining-questions {
         width: 50%;
-    float: right;
-    text-align: right;
-    padding: 10px 40px;
-    /* background-color: #fff; */
-    
+        float: right;
+        text-align: right;
+        padding: 10px 40px;
     }
 
     .question-text {
@@ -358,14 +343,17 @@ color: white;
 
 @media only screen and (max-width: 500px) {
     .quiz-start-page, .remaining-questions, .questions, .score {
-    width: 80%; }
+        width: 80%; 
+    }
 
-  .displayed-question li {
-    width: 100%;
-    margin: 5px auto; }
+    .displayed-question li {
+        width: 100%;
+        margin: 5px auto; 
+        }
 
-  .next-question {
-    width: 100%; } 
+    .next-question {
+        width: 100%; 
+    } 
 
     .title {
         font-size: .5rem;   
@@ -379,4 +367,4 @@ color: white;
     
     /* Playing Cards by Nikita Kozin from the Noun Project */
     /* Card meaning from www.trustedtarot.com */
-    /* Card images from US Games */
+    /* Illustrations from the Morgan Greer Tarot cards reproduced by permission of U.S. Games Systems, Inc., Stamford, CT 06902.  c. 1993 by U.S. Games Systems, Inc.  All rights reserved.  */
